@@ -1,0 +1,44 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-app.js";
+import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-analytics.js";
+import { getDatabase, ref, runTransaction } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBxW6ww88DccOT64eQzXmBehEC8EIYTlmk",
+  authDomain: "notifly-52145.firebaseapp.com",
+  projectId: "notifly-52145",
+  storageBucket: "notifly-52145.firebasestorage.app",
+  messagingSenderId: "226509743152",
+  appId: "1:226509743152:web:b3882f8dab6259f42139f5",
+  measurementId: "G-BJZRPEXZD1"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const database = getDatabase(app);
+
+// Attach the tracking function to the global window object
+// so it can be called from script.js whenever a user clicks download
+window.trackApkDownload = function() {
+    try {
+        // 1. Log event to Firebase Analytics
+        logEvent(analytics, 'file_download', {
+            file_name: 'app-release.apk',
+            source: 'website_button'
+        });
+        console.log("Firebase Analytics: file_download event sent.");
+
+        // 2. Increment Firebase Realtime Database counter
+        const clickRef = ref(database, 'downloads/total_clicks');
+        runTransaction(clickRef, (currentClicks) => {
+            // If currentClicks is null, it means no data exists yet, so start at 1
+            return (currentClicks || 0) + 1;
+        }).then(() => {
+            console.log("Firebase Database: Click counter updated successfully.");
+        }).catch((error) => {
+            console.error("Firebase Database: Failed to update counter.", error);
+        });
+    } catch (e) {
+        console.error("Firebase Tracking Error:", e);
+    }
+};

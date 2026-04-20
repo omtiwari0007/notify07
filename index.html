@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notify - 3D Futuristic Experience</title>
+    <meta name="description" content="Replace boring notifications with dynamic flying birds. Download notify now!">
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Lottie Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-dove"></i>
+                <span>notify</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features">Controller</a>
+                <a href="#premium">Characters</a>
+            </div>
+            <div class="nav-actions">
+                <a href="app-release.apk" class="cta-btn primary start-apk-download" type="application/vnd.android.package-archive" download="BirdNotification.apk">DOWNLOAD APK</a>
+                    <button class="menu-btn" aria-label="Menu"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    <div class="dropdown-menu">
+                        <a href="app-setup.html" class="dropdown-item"><i class="fa-solid fa-gear"></i> App Setup</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>SYSTEM ACTIVE:<br><span class="highlight">FLIGHT MODE</span></h1>
+                <p>Welcome to the ultimate notification controller. Replace standard alerts with dynamic, fully customizable flying objects and birds. Unlock premium characters for just ₹5!</p>
+
+                <!-- Setup Guide Video Placeholder -->
+                <div style="margin-top: 20px; margin-bottom: 25px; padding: 15px; background: rgba(255, 204, 0, 0.1); border-left: 4px solid #ffcc00; border-radius: 8px;">
+                    <div id="youtube-guide-container" style="width: 100%; max-width: 450px; margin: 0 auto 10px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 5px 15px rgba(0,0,0,0.5);">
+                        <iframe width="100%" style="aspect-ratio: 16/9; display: block;" src="https://www.youtube.com/embed/BE6uj1COo8I?rel=0" title="APK Setup Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #ffcc00; text-align: center; margin-bottom: 0;"><strong>⚠️ APK SETUP GUIDE:</strong> Please watch this video completely before downloading the app to avoid any installation errors.</p>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="app-release.apk" class="cta-btn primary start-apk-download" type="application/vnd.android.package-archive" download><i class="fa-brands fa-android"></i> INIT DOWNLOAD</a>
+                    <a href="#premium" class="cta-btn secondary">PREVIEW MODELS</a>
+                </div>
+            </div>
+            <div class="hero-visual" style="flex-direction: column; gap: 20px;">
+                <!-- Abstract Bird Logo Container (Mimicking App Header) -->
+                <div class="glass tilt-card" style="padding: 40px 50px; text-align: center; width: 100%; max-width: 400px; border-color: var(--cyan);">
+                    <h2 style="color: white; margin-bottom: 0px; text-shadow: 0 0 10px rgba(255,255,255,0.5);">BIRD<br>CONTROLLER</h2>
+                    <p style="color: var(--cyan); font-weight: 800; font-size: 0.9rem; margin-top: 10px; letter-spacing: 1px;">SYSTEM ACTIVE: FLIGHT MODE</p>
+                    <div style="margin-top: 30px;">
+                        <lottie-player id="main-lottie-player" src="./lotifiles/Flyingheart.json" background="transparent" speed="1" style="width: 100%; height: 200px; transition: transform 0.2s; transform: scale(1.45);" loop autoplay></lottie-player>
+                    </div>
+                </div>
+
+                <!-- Settings Card moved under Bird Controller -->
+                <div class="settings-card tilt-card" style="width: 100%; max-width: 400px; margin: 0; padding: 25px 30px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+                        <span style="font-weight: 600;">Animation Speed</span>
+                        <span id="speed-label" style="color: var(--cyan); font-weight: 800;">Standard</span>
+                    </div>
+                    <div class="slider-container" style="--val: 50%; --fill-color: var(--premium-yellow);">
+                        <input type="range" id="speed-slider" class="styled-slider" min="1" max="100" value="50">
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 12px; margin-top: 25px;">
+                        <span style="font-weight: 600;">Bird Size</span>
+                        <span id="size-label" style="color: var(--cyan); font-weight: 800;">Large</span>
+                    </div>
+                    <div class="slider-container" style="--val: 95%; --fill-color: var(--cyan);">
+                        <input type="range" id="size-slider" class="styled-slider" min="1" max="100" value="95">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features / Dashboard Section -->
+    <section id="features" class="features">
+        <h2>DASHBOARD MODULES</h2>
+        <div class="features-grid">
+            
+            <div class="feature-bar orange tilt-card">
+                <div>
+                    <h3>BIRD GALLERY</h3>
+                    <p>MODELS SYNCED</p>
+                </div>
+                <div class="feature-icon"><i class="fa-solid fa-images"></i></div>
+            </div>
+
+            <div class="feature-bar pink tilt-card">
+                <div>
+                    <h3>SMART ANIMATION</h3>
+                    <p>APP-SPECIFIC LOGIC</p>
+                </div>
+                <div class="feature-icon"><i class="fa-solid fa-crosshairs"></i></div>
+            </div>
+
+            <div class="feature-bar orange tilt-card">
+                <div>
+                    <h3>COUPLE MODE</h3>
+                    <p>SPECIAL ONE'S THEME</p>
+                </div>
+                <div class="feature-icon"><i class="fa-solid fa-star"></i></div>
+            </div>
+
+            <!-- Settings Card was moved to Hero Section -->
+
+        </div>
+    </section>
+
+    <!-- Free Models Section -->
+    <section id="free-models" class="premium" style="padding-bottom: 20px; padding-top: 80px;">
+        <h2 style="color: var(--cyan); text-shadow: 0 0 10px rgba(0,212,255,0.3); text-align: left; max-width: 1200px; padding-left: 20px;">FREE MODELS</h2>
+        
+        <div class="gallery-wrapper" style="margin-top: 30px; justify-content: flex-start; padding-left: 20px; padding-right: 20px;">
+            
+            <div class="bird-card tilt-card" style="width: 250px; flex-shrink: 0;">
+                <span class="badge" style="position: absolute; top: -10px; right: 20px; background: var(--cyan); color: var(--bg-color); font-weight: 800; padding: 5px 15px; border-radius: 5px; font-size: 0.8rem; text-transform: uppercase;">Free</span>
+                <div class="bird-preview">
+                    <lottie-player src="./lotifiles/Gibli4.json" background="transparent" speed="1" style="width: 100%; height: 150px;" loop autoplay></lottie-player>
+                </div>
+                <h4>GIBLI4</h4>
+            </div>
+
+            <div class="bird-card tilt-card" style="width: 250px; flex-shrink: 0;">
+                <span class="badge" style="position: absolute; top: -10px; right: 20px; background: var(--cyan); color: var(--bg-color); font-weight: 800; padding: 5px 15px; border-radius: 5px; font-size: 0.8rem; text-transform: uppercase;">Free</span>
+                <div class="bird-preview">
+                    <lottie-player src="./lotifiles/bird_animation.json" background="transparent" speed="1" style="width: 100%; height: 150px;" loop autoplay></lottie-player>
+                </div>
+                <h4>BIRD_ANIMATION</h4>
+            </div>
+
+            <div class="bird-card tilt-card" style="width: 250px; flex-shrink: 0;">
+                <span class="badge" style="position: absolute; top: -10px; right: 20px; background: var(--cyan); color: var(--bg-color); font-weight: 800; padding: 5px 15px; border-radius: 5px; font-size: 0.8rem; text-transform: uppercase;">Free</span>
+                <div class="bird-preview">
+                    <lottie-player src="./lotifiles/Flyingheart.json" background="transparent" speed="1" style="width: 100%; height: 150px;" loop autoplay></lottie-player>
+                </div>
+                <h4>FLYINGHEART</h4>
+            </div>
+
+            <div class="bird-card tilt-card" style="width: 250px; flex-shrink: 0;">
+                <span class="badge" style="position: absolute; top: -10px; right: 20px; background: var(--cyan); color: var(--bg-color); font-weight: 800; padding: 5px 15px; border-radius: 5px; font-size: 0.8rem; text-transform: uppercase;">Free</span>
+                <div class="bird-preview">
+                    <lottie-player src="./lotifiles/flyingbird1.json" background="transparent" speed="1" style="width: 100%; height: 150px;" loop autoplay></lottie-player>
+                </div>
+                <h4>FLYING BIRD</h4>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Premium Characters Section -->
+    <section id="premium" class="premium" style="padding-top: 60px;">
+        <h2 style="text-align: left; max-width: 1200px; padding-left: 20px;">PREMIUM CHARACTERS <i class="fa-solid fa-lock" style="font-size: 1.5rem;"></i></h2>
+        
+        <div class="gallery-wrapper" style="justify-content: flex-start; padding-left: 20px; padding-right: 20px;">
+            
+            <div class="bird-card tilt-card" style="width: 250px; flex-shrink: 0;">
+                <span class="badge premium-badge">PREMIUM</span>
+                <div class="bird-preview">
+                    <lottie-player src="./lotifiles/AmongUs.json" background="transparent" speed="1" style="width: 100%; height: 150px;" loop autoplay></lottie-player>
+                </div>
+                <h4>AMONGUS</h4>
+            </div>
+
+            <div class="bird-card active tilt-card" style="width: 250px; flex-shrink: 0;">
+                <span class="badge premium-badge">PREMIUM</span>
+                <div class="bird-preview">
+                    <lottie-player src="./lotifiles/HorseRun.json" background="transparent" speed="1" style="width: 100%; height: 150px;" loop autoplay></lottie-player>
+                </div>
+                <h4>HORSERUN</h4>
+                <div class="active-text">ACTIVE</div>
+            </div>
+
+            <div class="bird-card tilt-card" style="width: 250px; flex-shrink: 0;">
+                <span class="badge premium-badge">PREMIUM</span>
+                <div class="bird-preview">
+                    <lottie-player src="./lotifiles/PixelSkull.json" background="transparent" speed="1" style="width: 100%; height: 150px;" loop autoplay></lottie-player>
+                </div>
+                <h4>PIXELSKULL</h4>
+            </div>
+
+            <div class="bird-card tilt-card" style="width: 250px; flex-shrink: 0;">
+                <span class="badge premium-badge">PREMIUM</span>
+                <div class="bird-preview">
+                    <lottie-player src="./lotifiles/Skull01.json" background="transparent" speed="1" style="width: 100%; height: 150px;" loop autoplay></lottie-player>
+                </div>
+                <h4>SKULL01</h4>
+            </div>
+
+        </div>
+        
+        <div style="margin-top: 50px;">
+            <a href="#" class="cta-btn secondary">BACK TO DASHBOARD</a>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download-section" style="padding:60px 20px; text-align:center;">
+        <h2>DOWNLOAD APP</h2>
+        <p id="mobile-instruction" style="max-width:720px; margin: 10px auto 6px; color:var(--muted);">Click the button below to download the app APK to your device. Place your APK file named <strong>app-release.apk</strong> in the site root (same folder as <em>index.html</em>).</p>
+
+        <div style="display:flex; gap:30px; align-items:center; justify-content:center; flex-wrap:wrap; margin-top:20px;">
+            <div>
+                <a id="download-apk-btn" href="app-release.apk" class="cta-btn primary start-apk-download" type="application/vnd.android.package-archive" download style="display:inline-block;"><i class="fa-brands fa-android"></i> Download APK</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer for Razorpay Compliance -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <i class="fa-solid fa-dove"></i>
+                    <span>notify</span>
+                </div>
+                <p>Advanced UI Customization Systems.</p>
+            </div>
+            <div class="footer-links">
+                <h4>LEGAL</h4>
+                <ul>
+                    <li><a href="#" class="modal-trigger" data-modal="contact-modal">Contact Us</a></li>
+                    <li><a href="#" class="modal-trigger" data-modal="privacy-modal">Privacy Policy</a></li>
+                    <li><a href="#" class="modal-trigger" data-modal="terms-modal">Terms & Conditions</a></li>
+                    <li><a href="#" class="modal-trigger" data-modal="refund-modal">Cancellation & Refund</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>CONTACT</h4>
+                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:notifyservice24hr@gmail.com">notifyservice24hr@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 notify. ALL SYSTEMS SECURED.</p>
+        </div>
+    </footer>
+
+    <!-- Legal Modals -->
+    <!-- Contact Us Modal -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>CONTACT US</h2>
+            <div class="modal-body">
+                <p><strong>Business Name:</strong> notify</p>
+                <p><strong>Email:</strong> <a href="mailto:notifyservice24hr@gmail.com">notifyservice24hr@gmail.com</a></p>
+                <p><strong>Operating Address:</strong> Najafgarh, New Delhi, India</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Refund Modal -->
+    <div id="refund-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>CANCELLATION & REFUND POLICY</h2>
+            <div class="modal-body">
+                <p>Since "notify" offers non-tangible, irrevocable digital goods (premium flying animations and characters) that are instantly unlocked upon successful payment, we do not issue refunds once the order is accomplished and the digital item is unlocked on your device. All sales are final.</p>
+                <br>
+                <h3>EXCEPTIONS:</h3>
+                <p>If you face any technical issues (e.g., your payment was deducted but the premium bird did not unlock), please contact our support team at <strong>notifyservice24hr@gmail.com</strong> within 3 days of your transaction. Please include your payment proof/Transaction ID. We will investigate and manually unlock the item for you.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Modal -->
+    <div id="privacy-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>PRIVACY POLICY</h2>
+            <div class="modal-body">
+                <p>"notify" respects your privacy and is committed to protecting it.</p>
+                <br>
+                <h3>PERMISSIONS USED</h3>
+                <p>Our application requires specific permissions including "Draw over other apps" (Overlay), "Notification Access", and "Accessibility Services". These are strictly used to render the flying bird animations on your screen and to detect active chat windows (like WhatsApp) to pause animations and avoid interrupting your conversations.</p>
+                <br>
+                <h3>DATA COLLECTION</h3>
+                <p>We do not collect, read, store, or transmit your personal chat data, messages, or notification content to any external servers. All smart detection processes happen locally on your device.</p>
+                <br>
+                <h3>PAYMENT DATA</h3>
+                <p>All micro-transactions are securely processed by our payment partner (Razorpay). We do not collect or store your banking details, UPI PIN, or credit card information.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div id="terms-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>TERMS & CONDITIONS</h2>
+            <div class="modal-body">
+                <p>By downloading and using "notify", you agree to the following terms:</p>
+                <br>
+                <h3>SERVICE PROVIDED</h3>
+                <p>The app provides custom visual overlays (animations) for Android notifications. It is provided "as is" without any guarantees of compatibility across all Android OS versions.</p>
+                <br>
+                <h3>PURCHASES</h3>
+                <p>Premium characters and animations are available via secure one-time micro-transactions.</p>
+                <br>
+                <h3>INTELLECTUAL PROPERTY</h3>
+                <p>The animated assets (JSON/Lottie files) and app code are the property of the developer. You agree not to reverse-engineer, redistribute, or pirate the application's premium assets.</p>
+                <br>
+                <h3>MODIFICATIONS</h3>
+                <p>We reserve the right to modify the app's features, pricing, or these terms at any time without prior notice.</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="firebase-init.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

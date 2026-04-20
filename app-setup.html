@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notify - App Setup</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" style="background: rgba(11, 14, 20, 0.9); border-bottom: 1px solid var(--cyan);">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-dove"></i>
+                <span>notify</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#features">Controller</a>
+                <a href="index.html#premium">Characters</a>
+            </div>
+            <div class="nav-actions">
+                <a href="index.html#download" class="cta-btn primary start-apk-download">DOWNLOAD APK</a>
+                <div class="menu-container">
+                    <button class="menu-btn" aria-label="Menu"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    <div class="dropdown-menu">
+                        <a href="app-setup.html" class="dropdown-item"><i class="fa-solid fa-gear"></i> App Setup</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <section class="hero" style="min-height: 80vh; align-items: flex-start; padding-top: 150px;">
+        <div class="hero-content" style="flex-direction: column; text-align: center;">
+            <div style="margin-bottom: 40px;">
+                <i class="fa-solid fa-gear" style="font-size: 4rem; color: var(--cyan); margin-bottom: 20px;"></i>
+                <h2>APP <span class="highlight">SETUP</span></h2>
+                <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">Configure your notification experience, manage permissions, and link your devices easily.</p>
+            </div>
+            
+            <div class="settings-card tilt-card" style="max-width: 600px; width: 100%; margin: 0 auto; text-align: left;">
+                <h3 style="color: var(--cyan); margin-bottom: 20px;"><i class="fa-solid fa-mobile-screen"></i> Device Configuration</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 15px;">Ensure the app is correctly installed on your Android device and all necessary permissions are granted for overlays.</p>
+                <a href="index.html" class="cta-btn secondary" style="display: inline-block; width: 100%; text-align: center;"><i class="fa-solid fa-arrow-left"></i> BACK TO DASHBOARD</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
