@@ -1,15 +1,15 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-app.js";
-import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-analytics.js";
-import { getDatabase, ref, runTransaction } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-database.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-app.js";
+import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-analytics.js";
+import { getDatabase, ref, runTransaction } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-database.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBxW6ww88DccOT64eQzXmBehEC8EIYTlmk",
-  authDomain: "notifly-52145.firebaseapp.com",
-  projectId: "notifly-52145",
-  storageBucket: "notifly-52145.firebasestorage.app",
-  messagingSenderId: "226509743152",
-  appId: "1:226509743152:web:b3882f8dab6259f42139f5",
-  measurementId: "G-BJZRPEXZD1"
+  apiKey: "AIzaSyCgGFMvDzShUVnSdNcCQPSDjbHNyCIC9eU",
+  authDomain: "notify18-db97c.firebaseapp.com",
+  projectId: "notify18-db97c",
+  storageBucket: "notify18-db97c.firebasestorage.app",
+  messagingSenderId: "115092084245",
+  appId: "1:115092084245:web:5ad72c23e2667eb974a01c",
+  measurementId: "G-S014B3KW6C"
 };
 
 // Initialize Firebase
